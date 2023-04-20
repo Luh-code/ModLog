@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(umbra VERSION 1.0 LANGUAGES C CXX)
+project(modlog VERSION 1.0 LANGUAGES C CXX)
 include(CTest)
 
 # Ensures that we do an out of source build
@@ -17,6 +17,8 @@ ENDMACRO(MACRO_ENSURE_OUT_OF_SOURCE_BUILD)
 
 MACRO_ENSURE_OUT_OF_SOURCE_BUILD(
 "${CMAKE_PROJECT_NAME} requires an out of source build.")
+
+set(CMAKE_BUILD_TYPE Debug)
 
 set(CMAKE_C_COMILER "gcc-12.2")
 set(CMAKE_CXX_COMILER "g++-12.2")
@@ -45,13 +47,8 @@ file(GLOB umbraSrcFiles
   ${PROJECT_SOURCE_DIR}/src/**/*.cpp
 )
 
-add_compile_definitions(UMBRA_DEBUG)
-
-add_library(libUmbra ${umbraSrcFiles})
-set_target_properties(libUmbra PROPERTIES LINKER_LANGUAGE CXX)
-target_include_directories(libUmbra PUBLIC
-  ${PROJECT_SOURCE_DIR}/deps/HexBase/src/include
-)
+# add_library(libModLog ${umbraSrcFiles})
+# set_target_properties(libModLog PROPERTIES LINKER_LANGUAGE CXX)
 
 enable_testing()
 add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
