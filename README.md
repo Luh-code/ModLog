@@ -13,4 +13,17 @@ This is to get rid of the hassle that comes with trying to use libraries, that m
 # INDEV
 ModLog isn't fully tested nor feature complete nor implemented at this point.
 Right now ModLog can only abstract Loggers that use C++ Parameter Packs and doesn't have support for loggers working with variadic lists yet.
-Documentation will follow, when the project is in a more usable state.
+Features:
+ - Fully customizable generic abstraction for Loggers
+ - Adding formatting to a log
+  - Fully customizable formatting
+  - Multiple modes for formatting: Standard ANSI color mode, aixterm mode, 256 color mode, True color mode
+ - Adding a timestamp to a log
+Features still to-be-implemented:
+ - Domain-specific Logging
+ - Injecting the logging level into the log
+ - Logging to File
+ - Default colors for High-color-range mode and True-color-mode
+
+# Documentation
+The documentation isn't yet written and will become available at a later date, when the library has gotten more feature-complete.
