@@ -14,6 +14,12 @@ file(GLOB testSrcFiles
   ./src/**/*.cpp
 )
 
+add_compile_definitions(
+  MODLOG_AIXTERM_COMPLIANT
+  # MODLOG_HIGH_COLOR_RANGE
+  # MODLOG_TRUE_COLOR
+)
+
 add_executable(test0 ${testSrcFiles})
 target_include_directories(test0 PUBLIC ${PROJECT_SOURCE_DIR}/src/include)
 target_compile_options(test0 PRIVATE -Wall)

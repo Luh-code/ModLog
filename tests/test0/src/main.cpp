@@ -2,6 +2,9 @@
 
 int main()
 {
-  ModLog::BasicCTLogger::info("Hello World from CTLogger directly!");
+  ModLog::logger.crit("Hello World through ModLog!");
+  ModLog::logger.error("Hello World through ModLog!");
+  ModLog::logger.warn("Hello World through ModLog!");
   ModLog::logger.info("Hello World through ModLog!");
+  ModLog::logger.debug("Hello World through ModLog!");
 }

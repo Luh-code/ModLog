@@ -36,7 +36,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ../bin)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ../bin/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ../bin/lib)
 
-file(GLOB umbraSrcFiles
+file(GLOB modlogSrcFiles
   ${PROJECT_SOURCE_DIR}/src/*.h
   ${PROJECT_SOURCE_DIR}/src/**/*.h
   ${PROJECT_SOURCE_DIR}/src/*.hpp
